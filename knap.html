@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interaktiv frontend-udvikling</title>
+    <style>
+      /* design af boks */
+      .box {
+        width: 120px;
+        height: 120px;
+        background-color: lightblue;
+        transition: transform 0.4s;
+      }
+      .box.active {
+        transform: rotate(180deg);
+        animation: moveBox 5s ease infinite;
+        transform: translateX(100px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="klik">Klik mig</button>
+    <div class="box"></div>
+  </body>
+
+  <script>
+    document.querySelector("#klik").addEventListener("click", function () {
+      document.querySelector(".box").classList.add("active");
+      document.querySelector("#klik").textContent = "Reset";
+    });
+
+    console.log("Hello world!");
+  </script>
+</html>

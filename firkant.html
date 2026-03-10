@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interaktiv frontend-udvikling</title>
+    <style>
+      /* design af boks */
+      .box {
+        width: 120px;
+        height: 120px;
+        background-color: lightblue;
+        border-radius: 100%;
+        transition: transform 0.4s;
+        animation: moveBox 5s ease infinite;
+      }
+      .box.active {
+        animation-play-state: paused;
+      }
+      @keyframes moveBox {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(200px);
+        }
+        50% {
+          transform: translateY(200px) translateX(200px);
+        }
+        75% {
+          transform: translateY(200px) translateX(0);
+        }
+        100% {
+          transform: translateX(0) translateY(0);
+        }
+      }
+      .box2 {
+        width: 120px;
+        height: 120px;
+        background-color: lightblue;
+        border-radius: 100%;
+        transition: transform 0.4s;
+        animation: moveBox2 5s ease infinite;
+        margin-top: 50px;
+      }
+      .box2.active {
+        animation-play-state: paused;
+      }
+      @keyframes moveBox2 {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(200px);
+        }
+        50% {
+          transform: translateY(200px) translateX(200px);
+        }
+        75% {
+          transform: translateY(200px) translateX(0);
+        }
+        100% {
+          transform: translateX(0) translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Toggle</button>
+    <div class="box"></div>
+
+    <div class="box2"></div>
+  </body>
+
+  <script>
+    document.querySelector("button").addEventListener("click", function () {
+      document.querySelector(".box").classList.toggle("active");
+    });
+    console.log("Hello world!");
+  </script>
+</html>
