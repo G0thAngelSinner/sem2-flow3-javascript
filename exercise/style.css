@@ -1,0 +1,14 @@
+.hidden {
+  display: none;
+}
+
+.liked {
+  background-color: rgb(230, 153, 189);
+  font-weight: bold;
+  color: white;
+}
+
+.dark {
+  background: black;
+  color: white;
+}
